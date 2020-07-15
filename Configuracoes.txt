@@ -1,11 +1,11 @@
+## GITHUB leoclana ##
 https://github.com/leoclana/ComecandoComSpringMVC.git
 git@github.com:leoclana/ComecandoComSpringMVC.git
 
 
-2.3-EnviandoDadosParaServidor
-
-
-
+## Banco de Dados H2 - banco em memória##
+Aula "2.4. Cadastrando um novo título"
+No pom deve ter : "spring-boot-starter-web", "com.h2database" e "spring-boot-devtools" 
 http://localhost:8080/h2-console
 Driver Class: org.h2.Driver
 JDBC URL: jdbc:h2:mem:testdb
