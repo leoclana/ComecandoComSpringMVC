@@ -26,7 +26,7 @@ public class Titulo {
 	
 	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	@Temporal(TemporalType.DATE)
-	private Date dataVencimeto;
+	private Date dataVencimento;
 	
 	@NumberFormat(pattern = "#,##0.00")
 	private BigDecimal valor;
@@ -50,12 +50,12 @@ public class Titulo {
 		this.descricao = descricao;
 	}
 
-	public Date getDataVencimeto() {
-		return dataVencimeto;
+	public Date getDataVencimento() {
+		return dataVencimento;
 	}
 
-	public void setDataVencimeto(Date dataVencimeto) {
-		this.dataVencimeto = dataVencimeto;
+	public void setDataVencimento(Date dataVencimento) {
+		this.dataVencimento = dataVencimento;
 	}
 
 	public BigDecimal getValor() {

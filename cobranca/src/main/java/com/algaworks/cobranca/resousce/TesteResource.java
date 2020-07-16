@@ -27,7 +27,7 @@ public class TesteResource {
 		Titulo titulo = new Titulo();
 		titulo.setDescricao("CASA da Mâe Joana");
 		titulo.setStatus(StatusTitulo.PENDENTE);
-		titulo.setDataVencimeto(new Date());
+		titulo.setDataVencimento(new Date());
 		titulo.setValor(BigDecimal.valueOf(123L));
 		
 		retorno = ( titulo != null ? ResponseEntity.ok(titulo) : ResponseEntity.noContent().build());

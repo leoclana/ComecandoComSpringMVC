@@ -1,5 +1,7 @@
 package com.algaworks.cobranca.controller;
 
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,7 +14,6 @@ import com.algaworks.cobranca.repository.Titulos;
 @RequestMapping("/titulos")
 public class TituloController {
 	
-	
 	@Autowired
 	private Titulos titulos;
 	
@@ -22,9 +23,10 @@ public class TituloController {
 	}
 	
 	@RequestMapping(method = RequestMethod.POST)
-	public String slavar(Titulo titulo) {
+	public String salvar(Titulo titulo) {
 		System.out.println(">>> " + titulo.getDescricao());
 		
+		//titulo.setDataVencimento(new Date());
 		titulos.save(titulo);
 		
 		return "CadastroTitulo";
