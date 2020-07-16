@@ -12,22 +12,19 @@ import com.algaworks.cobranca.repository.Titulos;
 @RequestMapping("/titulos")
 public class TituloController {
 	
-	
 	@Autowired
 	private Titulos titulos;
-	
+
 	@RequestMapping("/novo")
 	public String novo() {
 		return "CadastroTitulo";
 	}
 	
 	@RequestMapping(method = RequestMethod.POST)
-	public String slavar(Titulo titulo) {
-		System.out.println(">>> " + titulo.getDescricao());
+	public String salvar(Titulo titulo) {
 		
 		titulos.save(titulo);
-		
 		return "CadastroTitulo";
 	}
-
+	
 }
