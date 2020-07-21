@@ -1,7 +1,11 @@
 package com.algaworks.cobranca.controller;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -20,7 +24,7 @@ public class TituloController {
 	@RequestMapping("/novo")
 	public ModelAndView novo() {
 		ModelAndView mv = new ModelAndView("CadastroTitulo");
-		mv.addObject("todosStatusTitulo", StatusTitulo.values());
+		//mv.addObject("todosStatusTitulo", StatusTitulo.values());
 		return mv;
 	}
 	
@@ -30,8 +34,19 @@ public class TituloController {
 		
 		ModelAndView mv = new ModelAndView("CadastroTitulo");		
 		mv.addObject("mensagem", "Titulo cadastrado com sucesso!");
-		mv.addObject("todosStatusTitulo", StatusTitulo.values());
+		//mv.addObject("todosStatusTitulo", StatusTitulo.values());
 		return mv;
+	}
+	
+	@ModelAttribute("todosStatusTitulo")
+	/**
+	 * Passara a devolver em todas as requisicoes, a "Lista de Status".
+	 * Ps.: Se não informar o nome desejado do atributo "todosStatusTitulo", automaticamente seria passodo como 
+	 *      "statusTituloList", montado pelo tipo de retorno "List<StatusTitulo>" do metodo "todosStatusTitulo()"
+	 * @return
+	 */
+	public List<StatusTitulo> todosStatusTitulo(){
+		return Arrays.asList(StatusTitulo.values());
 	}
 	
 }
