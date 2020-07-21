@@ -30,7 +30,7 @@ public class TituloController {
 		
 		ModelAndView mv = new ModelAndView("CadastroTitulo");		
 		mv.addObject("mensagem", "Titulo cadastrado com sucesso!");
-		
+		mv.addObject("todosStatusTitulo", StatusTitulo.values());
 		return mv;
 	}
 	
