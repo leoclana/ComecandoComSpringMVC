@@ -38,6 +38,11 @@ public class TituloController {
 		return mv;
 	}
 	
+	@RequestMapping
+	public String pesquisar() {
+		return "PesquisaTitulos";
+	}
+	
 	@ModelAttribute("todosStatusTitulo")
 	/**
 	 * Passara a devolver em todas as requisicoes, a "Lista de Status".
