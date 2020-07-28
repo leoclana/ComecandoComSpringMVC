@@ -4,7 +4,8 @@ public enum StatusTitulo {
 
 	PENDENTE("Pendente"),
 	RECEBIDO("Recebido"),
-	CANCELADO("Cancelado");
+	CANCELADO("Cancelado"),
+	INDEF("new Status");
 	
 	private String descricao;
 	

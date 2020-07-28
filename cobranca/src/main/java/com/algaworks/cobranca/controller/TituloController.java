@@ -38,6 +38,14 @@ public class TituloController {
 		return mv;
 	}
 	
+	@RequestMapping
+	public ModelAndView pesquisar() {
+		ModelAndView mv = new ModelAndView("PesquisaTitulos");
+		List<Titulo> todosTitulos = titulos.findAll();
+		mv.addObject("titulos", todosTitulos);
+		return mv;
+	}
+	
 	@ModelAttribute("todosStatusTitulo")
 	/**
 	 * Passara a devolver em todas as requisicoes, a "Lista de Status".

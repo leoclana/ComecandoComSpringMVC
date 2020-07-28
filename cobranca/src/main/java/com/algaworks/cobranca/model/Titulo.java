@@ -73,6 +73,29 @@ public class Titulo {
 	public void setStatus(StatusTitulo status) {
 		this.status = status;
 	}
+	
+	public boolean isPendente() {
+		return StatusTitulo.PENDENTE.equals(this.status);
+	}
+	
+	public boolean isRecebido() {
+		return StatusTitulo.RECEBIDO.equals(this.status);
+	}
+	
+	public boolean isCancelado() {
+		return StatusTitulo.CANCELADO.equals(this.status);
+	}
+	
+	
+	/*
+	 * public String getCorStatus() { String retorno = "label-danger";
+	 * switch(this.status.getDescricao()) { case "Pendente": retorno =
+	 * "label-danger"; break; case "Recebido": retorno = "label-success"; break;
+	 * case "Cancelado": retorno = "label-warning"; break; default : retorno =
+	 * "label-default"; break; }
+	 * 
+	 * return retorno; }
+	 */
 
 	@Override
 	public int hashCode() {
